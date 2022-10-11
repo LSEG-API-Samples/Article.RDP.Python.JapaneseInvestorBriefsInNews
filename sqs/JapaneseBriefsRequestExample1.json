@@ -1,0 +1,29 @@
+{
+    "transport": {
+        "transportType": "AWS-SQS"
+    },
+    "filter": {
+      "operator": "and",
+      "operands": [
+        {
+          "type": "product",
+          "value": "NP:RINBX"
+        },
+        {
+          "type": "language",
+          "value": "L:ja"
+        },
+        {
+          "type": "newscode",
+          "value": "G:6J"
+        }
+      ],
+      "type": "operator"
+    },
+"filterOverrides": {},
+"maxcount": 10,
+"dateFrom": "null",
+"dateTo": "null",
+"relevanceGroup": "all",
+    "payloadVersion": "2.0"
+}
