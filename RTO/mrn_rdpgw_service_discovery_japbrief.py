@@ -136,7 +136,7 @@ class WebSocketSession:
         print("RECEIVED: Refresh Message")
         self._decodeFieldList(message_json["Fields"])
 
-    def verifyNewsAgainstSigDevReqs(self, news_, rics_of_interest):
+    def verifyNewsAgainstJapaneseBriefsReqs(self, news_, rics_of_interest):
         # a filter may either have or not have any given filtering stanza
         print('>>>NEWS FILTERING<<<')
         
@@ -240,7 +240,7 @@ class WebSocketSession:
                 print("News = "+json.dumps(news_decompressed, indent=2, separators=(',', ':')))
                 sys.stdout.flush()
                 print("<<<verify RDP filter result>>>= " + 
-                str(self.verifyNewsAgainstSigDevReqs(news_decompressed,rics_of_interest)))
+                str(self.verifyNewsAgainstJapaneseBriefsReqs(news_decompressed,rics_of_interest)))
                 sys.stdout.flush()
         except KeyError as keyerror:
             print('KeyError exception: ', keyerror)
